@@ -5,26 +5,26 @@ from datetime import datetime
 def lambda_handler(event, context):
     client = boto3.resource('dynamodb')
     table = client.Table('people')
+    username = event['pathParameters']['username']
     response = table.get_item(
         Key={
-            'username': event['path']
+            'username': username
         }
     )
-    ## Siempre hay item
-    if 'Item' in response:
+    if ('Item' in response) and (username.isalpha()):
         birthday_str = response['Item']['birthday']
         birthday = datetime.strptime(birthday_str, '%Y-%m-%d')
         today = datetime.today()
         if (birthday.month == today.month) and (birthday.day == today.day):
             return {
                 "statusCode": '200',
-                "body": "{ \"message\": \"Hello\"" + response['Item']['username'] + "\"! Happy birthday!\" }"
+                "body": "{ \"message\": \"Hello " + username + "! Happy birthday!\" }"
             }
         else:
             diff = str(calculate_diff(birthday, today))
             return {
                 "statusCode": '200',
-                "body": "{ \"message\": \"Hello\"" + response['Item']['username'] + "\"! Your Birthday is in \"" +
+                "body": "{ \"message\": \"Hello " + username + "! Your Birthday is in \"" +
                         diff + "\" days!\"}"
             }
     else:

@@ -11,9 +11,9 @@ def lambda_handler(event, context):
     body = json.loads(event['body'])
     birthday_str = body['dateOfBirth']
     birthday = datetime.strptime(birthday_str, '%Y-%m-%d')
-    if birthday < today:
-        username = event['pathParameters']['username']
-        response = table.put_item(
+    username = event['pathParameters']['username']
+    if (birthday < today) and username.isalpha():
+        table.put_item(
             Item=
             {
                 'username': username,
@@ -21,8 +21,7 @@ def lambda_handler(event, context):
             }
         )
         return {
-            'statusCode': response['ResponseMetadata']['HTTPStatusCode'],
-            'body': 'User ' + username + ' added'
+            'statusCode': '204',
         }
     else:
         return {
