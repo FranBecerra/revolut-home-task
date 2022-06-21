@@ -24,8 +24,8 @@ def lambda_handler(event, context):
             diff = str(calculate_diff(birthday, today))
             return {
                 "statusCode": '200',
-                "body": "{ \"message\": \"Hello " + username + "! Your Birthday is in \"" +
-                        diff + "\" days!\"}"
+                "body": "{ \"message\": \"Hello " + username + "! Your Birthday is in " +
+                        diff + " days!\"}"
             }
     else:
         return {
