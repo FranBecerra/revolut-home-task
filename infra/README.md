@@ -20,8 +20,7 @@ One of the outputs will be `base_url`, which gives us the URL to the deployed AP
 We can use this output variable to use the API directly from our local machine.
 
 ## Usage
-
-The simplest way is building the HTTP requests with `curl` from our local machine. However, you can also use an API IDE such as Postman, or your favorite browser. 
+First, run the PUT Requests so there is data in the DynamoDB. There are four different events that you can paste in the testing tab directly in the AWS Lambda Console in `tests` directory.
 
 #### PUT request
 ```bash
@@ -30,7 +29,7 @@ curl --request PUT \
 --data '{"dateOfBirth": "1994-08-30"}' \
 "$(terraform output -raw base_url)/hello/Fran"
 ```
-This type of requests does not return any message.
+This type of requests does not return any message, unless there is an error with the date.
 #### GET request
 ```bash
 curl "$(terraform output -raw base_url)/hello/<username>"
