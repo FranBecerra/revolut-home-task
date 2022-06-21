@@ -1,0 +1,89 @@
+{
+  "version": "1.0",
+  "resource": "/hello/{username}",
+  "path": "/lambda_birthday_stage/hello/Stranger",
+  "httpMethod": "GET",
+  "headers": {
+    "Content-Length": "0",
+    "Host": "0sxp68gg7l.execute-api.us-east-1.amazonaws.com",
+    "Postman-Token": "16518dc0-4175-4769-9e1b-0f54e26c85d9",
+    "User-Agent": "PostmanRuntime/7.29.0",
+    "X-Amzn-Trace-Id": "Root=1-62b21740-5e8b42582a4a1bf0206ddfba",
+    "X-Forwarded-For": "47.61.126.108",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https",
+    "accept": "*/*",
+    "accept-encoding": "gzip, deflate, br"
+  },
+  "multiValueHeaders": {
+    "Content-Length": [
+      "0"
+    ],
+    "Host": [
+      "0sxp68gg7l.execute-api.us-east-1.amazonaws.com"
+    ],
+    "Postman-Token": [
+      "16518dc0-4175-4769-9e1b-0f54e26c85d9"
+    ],
+    "User-Agent": [
+      "PostmanRuntime/7.29.0"
+    ],
+    "X-Amzn-Trace-Id": [
+      "Root=1-62b21740-5e8b42582a4a1bf0206ddfba"
+    ],
+    "X-Forwarded-For": [
+      "47.61.126.108"
+    ],
+    "X-Forwarded-Port": [
+      "443"
+    ],
+    "X-Forwarded-Proto": [
+      "https"
+    ],
+    "accept": [
+      "*/*"
+    ],
+    "accept-encoding": [
+      "gzip, deflate, br"
+    ]
+  },
+  "queryStringParameters": "",
+  "multiValueQueryStringParameters": "",
+  "requestContext": {
+    "accountId": "294472431788",
+    "apiId": "0sxp68gg7l",
+    "domainName": "0sxp68gg7l.execute-api.us-east-1.amazonaws.com",
+    "domainPrefix": "0sxp68gg7l",
+    "extendedRequestId": "UFiSFgrXIAMEV1A=",
+    "httpMethod": "GET",
+    "identity": {
+      "accessKey": "",
+      "accountId": "",
+      "caller": "",
+      "cognitoAmr": "",
+      "cognitoAuthenticationProvider": "",
+      "cognitoAuthenticationType": "",
+      "cognitoIdentityId": "",
+      "cognitoIdentityPoolId": "",
+      "principalOrgId": "",
+      "sourceIp": "47.61.126.108",
+      "user": "",
+      "userAgent": "PostmanRuntime/7.29.0",
+      "userArn": ""
+    },
+    "path": "/lambda_birthday_stage/hello/Stranger",
+    "protocol": "HTTP/1.1",
+    "requestId": "UFiSFgrXIAMEV1A=",
+    "requestTime": "21/Jun/2022:19:08:48 +0000",
+    "requestTimeEpoch": 1655838528342,
+    "resourceId": "GET /hello/{username}",
+    "resourcePath": "/hello/{username}",
+    "stage": "lambda_birthday_stage"
+  },
+  "pathParameters": {
+    "username": "Stranger"
+  },
+  "stageVariables": "",
+  "body": "",
+  "isBase64Encoded": "False"
+}
